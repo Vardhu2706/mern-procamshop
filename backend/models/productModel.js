@@ -34,7 +34,6 @@ const productSchema = mongoose.Schema(
     },
     subCategory: {
       type: String,
-      required: true,
     },
     category: {
       type: String,
@@ -47,12 +46,10 @@ const productSchema = mongoose.Schema(
     // Objects
     features: {
       type: Object,
-      required: true,
     },
     // Arrays
     showcase: {
       type: Array,
-      required: true,
     },
     // Numbers
     price: {
@@ -68,12 +65,10 @@ const productSchema = mongoose.Schema(
     reviews: [reviewSchema],
     rating: {
       type: Number,
-      required: true,
       default: 0,
     },
     numReviews: {
       type: Number,
-      required: true,
       default: 0,
     },
   },
