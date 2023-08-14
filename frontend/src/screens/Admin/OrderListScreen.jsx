@@ -4,12 +4,14 @@ import { Table, Button } from "react-bootstrap";
 import Message from "../../components/Message";
 import Loader from "../../components/Loader";
 import { FaTimes } from "react-icons/fa";
+import Meta from "../../components/Meta";
 
 const OrderListScreen = () => {
   const { data: orders, isLoading, error } = useGetOrdersQuery();
 
   return (
     <>
+      <Meta title="Orders | ProCam Shop" />
       <h1>Orders</h1>
       {isLoading ? (
         <Loader />

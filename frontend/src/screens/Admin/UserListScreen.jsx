@@ -9,6 +9,7 @@ import {
   useGetUsersQuery,
 } from "../../slices/usersAPISlice";
 import { toast } from "react-toastify";
+import Meta from "../../components/Meta";
 
 const UserListScreen = () => {
   const { data: users, refetch, isLoading, error } = useGetUsersQuery();
@@ -28,6 +29,7 @@ const UserListScreen = () => {
 
   return (
     <>
+      <Meta title="Users | ProCam Shop" />
       <h1>Users</h1>
       {isLoading ? (
         <Loader />

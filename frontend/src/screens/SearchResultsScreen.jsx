@@ -1,17 +1,19 @@
 import { Row, Col } from "react-bootstrap";
 import Product from "../components/Product";
-import BrandCarousel from "../components/Carousel.jsx";
 import Socials from "../components/Socials.jsx";
 import { useGetProductsQuery } from "../slices/productAPISlice";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
+import { Link, useParams } from "react-router-dom";
 import Meta from "../components/Meta";
 
-const HomeScreen = () => {
-  const { data: products, isLoading, error } = useGetProductsQuery();
+const SearchResultsScreen = () => {
+  const { keyword } = useParams();
+  const { data: products, isLoading, error } = useGetProductsQuery(keyword);
 
   return (
     <>
+      <Meta title="Search | ProCam Shop" />
       {isLoading ? (
         <Loader />
       ) : error ? (
@@ -20,11 +22,12 @@ const HomeScreen = () => {
         </Message>
       ) : (
         <>
-          <Meta title="Home | ProCam Shop" />
-          <BrandCarousel />
-          <h1>Top Rated</h1>
+          <Link className="btn btn-light my-3" to="/">
+            Back
+          </Link>
+          <h1>Search Results for "{keyword}"</h1>
           <Row>
-            {products &&
+            {products[0] &&
               products
                 .filter((product) => product.rating > 4)
                 .slice(0, 8)
@@ -35,16 +38,13 @@ const HomeScreen = () => {
                 ))}
           </Row>
           <Row>
-            <h1>Recently launched</h1>
-            {products &&
-              products
-                .filter((product) => product.checkIsNew === true)
-                .slice(0, 8)
-                .map((product) => (
-                  <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
-                    <Product product={product} />
-                  </Col>
-                ))}
+            {products.length === 0 ? (
+              <Message>
+                No results found <Link to="/">Go Back</Link>
+              </Message>
+            ) : (
+              <></>
+            )}
           </Row>
           <Row>
             <Socials />
@@ -55,4 +55,4 @@ const HomeScreen = () => {
   );
 };
 
-export default HomeScreen;
+export default SearchResultsScreen;

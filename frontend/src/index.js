@@ -10,7 +10,7 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-
+import { HelmetProvider } from "react-helmet-async";
 import store from "./store";
 import { Provider } from "react-redux";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
@@ -31,19 +31,25 @@ import ProductListScreen from "./screens/Admin/ProductListScreen";
 import ProductEditScreen from "./screens/Admin/ProductEditScreen";
 import UserListScreen from "./screens/Admin/UserListScreen";
 import UserEditScreen from "./screens/Admin/UserEditScreen";
+import CategoriesScreen from "./screens/CategoriesScreen";
 
 // Components
 import PrivateRoute from "./components/PrivateRoute";
 import AdminRoute from "./components/AdminRoute";
+import SearchResultsScreen from "./screens/SearchResultsScreen";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
+      {/* Open Routes */}
       <Route index={true} path="/" element={<HomeScreen />} />
+      <Route path="/search/:keyword" element={<SearchResultsScreen />} />
       <Route path="/product/:id" element={<ProductScreen />} />
       <Route path="/cart" element={<CartScreen />} />
       <Route path="/login" element={<LoginScreen />} />
       <Route path="/register" element={<RegisterScreen />} />
+      <Route path="/categories/:category" element={<CategoriesScreen />} />
+
       {/* Registered Routes */}
       <Route path="" element={<PrivateRoute />}>
         <Route path="/shipping" element={<ShippingScreen />} />
@@ -68,11 +74,13 @@ const router = createBrowserRouter(
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <PayPalScriptProvider deferLoading={true}>
-        <RouterProvider router={router} />
-      </PayPalScriptProvider>
-    </Provider>
+    <HelmetProvider>
+      <Provider store={store}>
+        <PayPalScriptProvider deferLoading={true}>
+          <RouterProvider router={router} />
+        </PayPalScriptProvider>
+      </Provider>
+    </HelmetProvider>refetch
   </React.StrictMode>
 );
 

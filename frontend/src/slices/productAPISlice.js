@@ -1,11 +1,14 @@
-import { PRODUCTS_URL } from "../constants";
+import { PRODUCTS_URL, CATEGORIES_URL } from "../constants";
 import { apiSlice } from "./apiSlice";
-
 export const productsApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
+    // Queries
     getProducts: builder.query({
-      query: () => ({
+      query: (keyword) => ({
         url: PRODUCTS_URL,
+        params: {
+          keyword,
+        },
       }),
       providesTags: ["Products"],
       keepUnusedDataFor: 5,
@@ -16,6 +19,15 @@ export const productsApiSlice = apiSlice.injectEndpoints({
       }),
       keepUnusedDataFor: 5,
     }),
+    getProductsByCategory: builder.query({
+      query: (category) => ({
+        url: `${CATEGORIES_URL}/${category}`,
+      }),
+      keepUnusedDataFor: 5,
+    }),
+
+    // Mutations
+
     createProduct: builder.mutation({
       query: () => ({
         url: `${PRODUCTS_URL}`,
@@ -37,6 +49,14 @@ export const productsApiSlice = apiSlice.injectEndpoints({
         method: "DELETE",
       }),
     }),
+    createReview: builder.mutation({
+      query: (data) => ({
+        url: `${PRODUCTS_URL}/${data.productId}/reviews`,
+        method: "POST",
+        body: data,
+      }),
+      invalidatesTags: ["Product"],
+    }),
   }),
 });
 
@@ -46,4 +66,8 @@ export const {
   useCreateProductMutation,
   useUpdateProductMutation,
   useDeleteProductMutation,
+  useCreateReviewMutation,
+  useGetProductsByCategoryQuery,
 } = productsApiSlice;
+
+export default productsApiSlice.reducer;

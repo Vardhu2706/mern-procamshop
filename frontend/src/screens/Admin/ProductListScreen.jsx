@@ -10,6 +10,7 @@ import {
   useDeleteProductMutation,
 } from "../../slices/productAPISlice";
 import { toast } from "react-toastify";
+import Meta from "../../components/Meta";
 
 const ProductListScreen = () => {
   const { data: products, isLoading, error, refetch } = useGetProductsQuery();
@@ -45,6 +46,7 @@ const ProductListScreen = () => {
 
   return (
     <>
+      <Meta title="Products | ProCam Shop" />
       <Row className="align-items-center">
         <Col>
           <h1>Products</h1>

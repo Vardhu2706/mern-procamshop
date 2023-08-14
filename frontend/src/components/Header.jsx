@@ -6,6 +6,7 @@ import { useLogoutMutation } from "../slices/usersAPISlice";
 import { useNavigate } from "react-router-dom";
 import { logout } from "../slices/authSlice";
 import logo from "../assets/logo.png";
+import SearchBox from "./SearchBox";
 
 const Header = () => {
   const { cartItems } = useSelector((state) => state.cart);
@@ -37,8 +38,33 @@ const Header = () => {
             </Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
+              <SearchBox />
+              {/* Categories */}
+              <NavDropdown id="nav-dropdown-dark" title="Categories">
+                <LinkContainer to="/categories/cameras">
+                  <NavDropdown.Item>Cameras</NavDropdown.Item>
+                </LinkContainer>
+                <LinkContainer to="/categories/lenses">
+                  <NavDropdown.Item>Camera Lens</NavDropdown.Item>
+                </LinkContainer>
+                <LinkContainer to="/categories/action">
+                  <NavDropdown.Item>Action Cameras</NavDropdown.Item>
+                </LinkContainer>
+                <LinkContainer to="/categories/audio">
+                  <NavDropdown.Item>
+                    Pro Audio{" "}
+                    <span className="badge rounded-pill bg-primary">New</span>
+                  </NavDropdown.Item>
+                </LinkContainer>
+                <NavDropdown.Divider />
+                <LinkContainer to="/categories/all">
+                  <NavDropdown.Item>All Products</NavDropdown.Item>
+                </LinkContainer>
+              </NavDropdown>
+
               <LinkContainer to="/cart">
                 <Nav.Link>
                   <FaShoppingCart /> Cart

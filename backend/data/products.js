@@ -22,6 +22,7 @@ const products = [
     countInStock: 10,
     rating: 4.5,
     numReviews: 10,
+    checkIsNew: false,
   },
   {
     name: "Nikon COOLPIX B600 Digital Camera",
@@ -45,6 +46,7 @@ const products = [
     countInStock: 10,
     rating: 4,
     numReviews: 10,
+    checkIsNew: false,
   },
   {
     name: "Fujifilm X100F Digital Camera",
@@ -68,6 +70,7 @@ const products = [
     countInStock: 10,
     rating: 3.5,
     numReviews: 10,
+    checkIsNew: false,
   },
 
   // Cameras - DSLR Cameras
@@ -95,6 +98,7 @@ const products = [
     countInStock: 10,
     rating: 4,
     numReviews: 10,
+    checkIsNew: false,
   },
   {
     name: "Canon 6D Mark II Camera",
@@ -117,6 +121,7 @@ const products = [
     countInStock: 10,
     rating: 3.5,
     numReviews: 10,
+    checkIsNew: false,
   },
   {
     name: "Canon 77D Camera Kit",
@@ -139,6 +144,7 @@ const products = [
     countInStock: 10,
     rating: 5,
     numReviews: 10,
+    checkIsNew: false,
   },
 
   // Cameras - Mirrorless Camera
@@ -163,6 +169,7 @@ const products = [
     countInStock: 10,
     rating: 4.5,
     numReviews: 10,
+    checkIsNew: false,
   },
   {
     name: "Panasonic Lumix DC-S1R Mirrorless Camera",
@@ -190,6 +197,7 @@ const products = [
     countInStock: 10,
     rating: 3.5,
     numReviews: 10,
+    checkIsNew: false,
   },
   {
     name: "Panasonic Lumix DMC-G85K Mirrorless Camera",
@@ -213,6 +221,7 @@ const products = [
     countInStock: 10,
     rating: 3.5,
     numReviews: 10,
+    checkIsNew: false,
   },
 
   // Cameras - Medium Format
@@ -240,6 +249,7 @@ const products = [
     countInStock: 10,
     rating: 4.5,
     numReviews: 10,
+    checkIsNew: false,
   },
   {
     name: "Fujifilm GFX 100 Medium Format Mirrorless Camera ",
@@ -264,6 +274,7 @@ const products = [
     countInStock: 10,
     rating: 5,
     numReviews: 10,
+    checkIsNew: false,
   },
   {
     name: "Fujifilm GFX 50R Medium Format Mirrorless Camera",
@@ -289,6 +300,7 @@ const products = [
     countInStock: 10,
     rating: 3,
     numReviews: 10,
+    checkIsNew: false,
   },
 
   // Cameras - Instant Cameras
@@ -316,6 +328,7 @@ const products = [
     countInStock: 10,
     rating: 4,
     numReviews: 10,
+    checkIsNew: false,
   },
   {
     name: "Fujifilm INSTAX SQUARE SQ6 Camera",
@@ -339,6 +352,7 @@ const products = [
     countInStock: 10,
     rating: 4.5,
     numReviews: 10,
+    checkIsNew: false,
   },
   {
     name: "Fujifilm INSTAX Mini 70 Instant Film Camera",
@@ -364,6 +378,7 @@ const products = [
     countInStock: 10,
     rating: 5,
     numReviews: 10,
+    checkIsNew: false,
   },
 
   // Cameras - Video Cameras
@@ -391,6 +406,7 @@ const products = [
     countInStock: 10,
     rating: 3.5,
     numReviews: 10,
+    checkIsNew: false,
   },
   {
     name: "Sony FX3 Full-Frame Cinema Camera",
@@ -423,6 +439,7 @@ const products = [
     countInStock: 10,
     rating: 4.5,
     numReviews: 10,
+    checkIsNew: false,
   },
   {
     name: "Panasonic AG-CX8ED 4K Professional Video Camera",
@@ -454,6 +471,7 @@ const products = [
     countInStock: 10,
     rating: 5,
     numReviews: 10,
+    checkIsNew: false,
   },
 
   // Lenses - DSLR Lens
@@ -479,6 +497,7 @@ const products = [
     countInStock: 10,
     rating: 4,
     numReviews: 10,
+    checkIsNew: false,
   },
   {
     name: "Nikon AF-S DX 16-85mm f/3.5-5.6G ED VR Lens",
@@ -503,6 +522,7 @@ const products = [
     countInStock: 10,
     rating: 4,
     numReviews: 10,
+    checkIsNew: false,
   },
   {
     name: "Sigma 500mm f/4 DG OS HSM Sports Lens",
@@ -527,6 +547,7 @@ const products = [
     countInStock: 10,
     rating: 3.4,
     numReviews: 10,
+    checkIsNew: false,
   },
 
   // Lenses - Mirrorless Lenses
@@ -553,6 +574,7 @@ const products = [
     countInStock: 10,
     rating: 4.2,
     numReviews: 10,
+    checkIsNew: false,
   },
   {
     name: "Nikon Z Micro 50mm f/2.8 Lens",
@@ -576,6 +598,7 @@ const products = [
     countInStock: 10,
     rating: 4,
     numReviews: 10,
+    checkIsNew: false,
   },
   {
     name: "Nikon Z Micro 105mm f/2.8 VR S Lens",
@@ -599,6 +622,7 @@ const products = [
     countInStock: 10,
     rating: 4,
     numReviews: 10,
+    checkIsNew: false,
   },
 
   // Lenses - Medium Format
@@ -624,6 +648,7 @@ const products = [
     countInStock: 10,
     rating: 4.5,
     numReviews: 10,
+    checkIsNew: false,
   },
   {
     name: "Fujifilm GF 50mm F/3.5 R LM WR Lens",
@@ -648,6 +673,7 @@ const products = [
     countInStock: 10,
     rating: 5,
     numReviews: 10,
+    checkIsNew: false,
   },
   {
     name: "Fujifilm GF 32-64mm f/4 R LM WR Lens",
@@ -672,6 +698,7 @@ const products = [
     countInStock: 10,
     rating: 3.5,
     numReviews: 10,
+    checkIsNew: false,
   },
 
   // Lenses - Filters & Adapters
@@ -701,6 +728,7 @@ const products = [
     countInStock: 10,
     rating: 4,
     numReviews: 10,
+    checkIsNew: false,
   },
   {
     name: "Hoya 52mm UX UV Filter",
@@ -721,6 +749,7 @@ const products = [
     countInStock: 10,
     rating: 4.6,
     numReviews: 10,
+    checkIsNew: false,
   },
   {
     name: "NiSi V6 Pro Starter Filter Kit III with Circular Polarizer Filter",
@@ -742,7 +771,7 @@ const products = [
       "/images/lenses/NiSi-100mm-Starter-Kit-Plus-Third-Generation-III-with-V6-and-Landscape-CPL_13.jpg",
     ],
     features: {
-      1: "Features the new NiSi V6 Holder",
+      1: "Features the checkIsNew NiSi V6 Holder",
       2: "Includes the Enhanced Landscape CPL",
       3: "Allows the use of 3 square filters + 1 circular polariser",
       4: "No vignetting on ultra wide lenses such as Canon 16-35mm f/2.8",
@@ -757,6 +786,7 @@ const products = [
     countInStock: 10,
     rating: 4.5,
     numReviews: 10,
+    checkIsNew: false,
   },
 
   // Action Cameras - Cameras
@@ -784,6 +814,7 @@ const products = [
     countInStock: 10,
     rating: 3.5,
     numReviews: 10,
+    checkIsNew: false,
   },
   {
     name: "GoPro HERO9 Black Action Camera",
@@ -809,6 +840,7 @@ const products = [
     countInStock: 10,
     rating: 4.5,
     numReviews: 10,
+    checkIsNew: false,
   },
   {
     name: "Insta360 One R (One Inch Leica Edition) Action Camera",
@@ -832,6 +864,7 @@ const products = [
     countInStock: 10,
     rating: 5,
     numReviews: 10,
+    checkIsNew: true,
   },
 
   // Action Cameras - Accessories
@@ -856,6 +889,7 @@ const products = [
     countInStock: 10,
     rating: 4,
     numReviews: 10,
+    checkIsNew: false,
   },
   {
     name: "Insta360 ONE R Boosted Battery Base",
@@ -876,6 +910,7 @@ const products = [
     countInStock: 10,
     rating: 4.1,
     numReviews: 10,
+    checkIsNew: false,
   },
   {
     name: "Ulanzi Gp-6 Cold Shoe for Action Camera",
@@ -895,6 +930,7 @@ const products = [
     countInStock: 10,
     rating: 3.6,
     numReviews: 10,
+    checkIsNew: false,
   },
 
   // Pro Audio - Microphones
@@ -929,6 +965,7 @@ const products = [
     countInStock: 10,
     rating: 4.5,
     numReviews: 10,
+    checkIsNew: false,
   },
   {
     name: "Rode Vlogger Filmmaking Kit",
@@ -960,6 +997,7 @@ const products = [
     countInStock: 10,
     rating: 4.5,
     numReviews: 10,
+    checkIsNew: true,
   },
   {
     name: "Sony LV-1 Stereo Lavalier Microphone",
@@ -984,6 +1022,7 @@ const products = [
     countInStock: 10,
     rating: 4.5,
     numReviews: 10,
+    checkIsNew: false,
   },
 
   // Pro Audio - Recorders
@@ -1015,6 +1054,7 @@ const products = [
     countInStock: 10,
     rating: 3.5,
     numReviews: 10,
+    checkIsNew: false,
   },
   {
     name: "Zoom H8 Recorder",
@@ -1044,6 +1084,7 @@ const products = [
     countInStock: 10,
     rating: 4,
     numReviews: 10,
+    checkIsNew: false,
   },
   {
     name: "LiveU Solo SDI/HDMI Video/Audio Encoder",
@@ -1067,6 +1108,7 @@ const products = [
     countInStock: 10,
     rating: 5,
     numReviews: 10,
+    checkIsNew: true,
   },
   {
     // Pro Audio - Speakers/Headphone
@@ -1091,6 +1133,7 @@ const products = [
     countInStock: 10,
     rating: 4.1,
     numReviews: 10,
+    checkIsNew: false,
   },
   {
     name: "Sony MHC-V21D Bluetooth Wireless Music System",
@@ -1118,6 +1161,7 @@ const products = [
     countInStock: 10,
     rating: 4,
     numReviews: 10,
+    checkIsNew: false,
   },
   {
     name: "Sennheiser HD 300 PRO Monitoring Headphones",
@@ -1141,6 +1185,7 @@ const products = [
     countInStock: 10,
     rating: 5,
     numReviews: 10,
+    checkIsNew: true,
   },
 ];
 
