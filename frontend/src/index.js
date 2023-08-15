@@ -80,7 +80,7 @@ root.render(
           <RouterProvider router={router} />
         </PayPalScriptProvider>
       </Provider>
-    </HelmetProvider>refetch
+    </HelmetProvider>
   </React.StrictMode>
 );
 
